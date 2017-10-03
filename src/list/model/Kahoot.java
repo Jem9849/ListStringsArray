@@ -1,5 +1,6 @@
 package list.model;
 
+// Adds in data members the class. 
 public class Kahoot
 {
 	private int questionCount;
@@ -7,6 +8,7 @@ public class Kahoot
 	private String creator;
 	private boolean isJumble;
 	
+	// We then add default values.
 	public Kahoot()
 	{
 		this.questionCount = 0;
@@ -15,12 +17,14 @@ public class Kahoot
 		this.isJumble = false;
 	}
 	
+	// Then we add in a string and a question count for the kahoots. 
 	public Kahoot(String creator, int questionCount)
 	{
 		this.creator = creator;
 		this.questionCount = questionCount;
 	}
 	
+	// Then we add a string to put things together. 
 	public String toString()
 	{
 		String desc = "This Kahoot was made by " + creator + " and has " + questionCount + " questions.";
