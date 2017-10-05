@@ -59,6 +59,7 @@ public class ListController
 				popup.displayText(currentCreator.substring(currentLetterIndex, currentLetterIndex + 1));
 			}
 			
+			for (int letter = currentTopic.length() - 1; letter >= 0; letter-= 1)
 			{
 				popup.displayText(currentTopic.substring(letter, letter + 1));
 			}
