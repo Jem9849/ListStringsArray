@@ -7,6 +7,7 @@ public class Kahoot
 	private int level;
 	private String creator;
 	private boolean isJumble;
+	private String topic;
 	
 	// We then add default values.
 	public Kahoot()
@@ -15,13 +16,16 @@ public class Kahoot
 		this.level = 1;
 		this.creator = "Somprasong";
 		this.isJumble = false;
+		this.topic = "some topic";
 	}
 	
 	// Then we add in a string and a question count for the kahoots. 
-	public Kahoot(String creator, int questionCount)
+	public Kahoot(String creator, int questionCount, String topic)
 	{
+		this();
 		this.creator = creator;
 		this.questionCount = questionCount;
+		this.topic = topic;
 	}
 	
 	// Then we add a string to put things together. 
@@ -35,5 +39,10 @@ public class Kahoot
 	public String getCreator()
 	{
 		return creator;
+	}
+	
+	public String getTopic()
+	{
+		return topic;
 	}
 }

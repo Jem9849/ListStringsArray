@@ -35,6 +35,7 @@ public class ListController
 		for (int index = 0; index < myKahoots.size(); index++)
 		{
 			currentCreator = myKahoots.get(index).getCreator();
+			String currentTopic = myKahoots.get(index).getTopic();
 			
 			popup.displayText(myKahoots.get(index).toString());
 			
@@ -52,9 +53,14 @@ public class ListController
 				}
 			}
 			
+			
 			for (int currentLetterIndex = 0; currentLetterIndex < currentCreator.length(); currentLetterIndex += 1)
 			{
 				popup.displayText(currentCreator.substring(currentLetterIndex, currentLetterIndex + 1));
+			}
+			
+			{
+				popup.displayText(currentTopic.substring(letter, letter + 1));
 			}
 		}
 	}
@@ -62,11 +68,11 @@ public class ListController
 	// Added objects into the myKahoots list.
 	private void fillTheList()
 	{
-		Kahoot fiftyStates = new Kahoot("Kashish", 50);
-		Kahoot bunnyFactsTackle = new Kahoot("Jeremy", 6);
-		Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE);
-		Kahoot animalColor = new Kahoot("Branton", 10);
-		Kahoot presidents = new Kahoot("Obama", 44);
+		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The fifty United States");
+		Kahoot bunnyFactsTackle = new Kahoot("Jeremy", 6, "Bunnies are carniverous.");
+		Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE, "Everything - literally");
+		Kahoot animalColor = new Kahoot("Branton", 10, "MURRRR COLORS");
+		Kahoot presidents = new Kahoot("Obama", 44, "The 44th president of US");
 		myKahoots.add(fiftyStates);
 		myKahoots.add(bunnyFactsTackle);
 		myKahoots.add(bigQuiz);
