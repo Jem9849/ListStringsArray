@@ -13,7 +13,7 @@ public class Kahoot
 	{
 		this.questionCount = 0;
 		this.level = 1;
-		this.creator = "Wierdo";
+		this.creator = "Somprasong";
 		this.isJumble = false;
 	}
 	

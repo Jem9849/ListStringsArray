@@ -31,9 +31,31 @@ public class ListController
 	
 	private void showTheList()
 	{
+		String currentCreator = "";
 		for (int index = 0; index < myKahoots.size(); index++)
 		{
+			currentCreator = myKahoots.get(index).getCreator();
+			
 			popup.displayText(myKahoots.get(index).toString());
+			
+			if(currentCreator.equals("Somprasong"))
+			{
+				for (int loop = 0; loop < 2; loop += 1)
+				{
+					if (loop == 0) {
+						popup.displayText("RAWR. You haz defaultness.");
+					}
+					else
+					{
+						popup.displayText("GOOBY BYE");
+					}
+				}
+			}
+			
+			for (int currentLetterIndex = 0; currentLetterIndex < currentCreator.length(); currentLetterIndex += 1)
+			{
+				popup.displayText(currentCreator.substring(currentLetterIndex, currentLetterIndex + 1));
+			}
 		}
 	}
 	
