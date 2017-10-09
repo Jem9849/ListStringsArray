@@ -1,5 +1,8 @@
 package list.model;
 
+import java.util.List;
+import java.util.ArrayList;
+
 // Adds in data members the class. 
 public class Kahoot
 {
@@ -8,6 +11,7 @@ public class Kahoot
 	private String creator;
 	private boolean isJumble;
 	private String topic;
+	private List<String> questions;
 	
 	// We then add default values.
 	public Kahoot()
@@ -20,12 +24,13 @@ public class Kahoot
 	}
 	
 	// Then we add in a string and a question count for the kahoots. 
-	public Kahoot(String creator, int questionCount, String topic)
+	public Kahoot(String creator, int questionCount, String topic, List<String>questions)
 	{
 		this();
 		this.creator = creator;
 		this.questionCount = questionCount;
 		this.topic = topic;
+		this.questions
 	}
 	
 	// Then we add a string to put things together. 

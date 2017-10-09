@@ -1,4 +1,4 @@
-package list.model;
+/*package list.model;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -16,9 +16,13 @@ public class Questions
 		questions.add (new questions("What is a cat?", "What is a dog?", "What is a octogonapus?")); 
 	}
 	
-	public questions(string owner, List questions)
+	public questions(String owner, List<String> quest)
 	{
 		this();
-		
+		this.owner = owner;
+		this.quest = quest;
 	}
+	
+	public String getOwner
 }
+*/
