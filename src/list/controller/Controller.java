@@ -6,18 +6,16 @@ import java.util.List;
 import java.util.ArrayList;
 import list.model.Kahoot;
 import list.view.DisplayPopup;
-import list.model.Questions;
 
 
 // Created a list called myKahoots and added a default kahoot called myFirstKahoot.
-public class ListController
+public class Controller
 {
 	private List<Kahoot> myKahoots;
-	private List<Questions> myQuestions;
 	
 	private DisplayPopup popup;
 	
-	public ListController()
+	public Controller()
 	{
 		myKahoots = new ArrayList<Kahoot>();
 		popup = new DisplayPopup();
@@ -28,7 +26,7 @@ public class ListController
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-		//showTheList();
+		showTheList();
 		changeTheList();
 	}
 	
@@ -95,5 +93,15 @@ public class ListController
 		popup.displayText("The list is still: " + myKahoots.size() + " items big.");
 		removed = myKahoots.set(2, new Kahoot());
 		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with by the Kahoot from: " + myKahoots.get(2).getCreator());
+	}
+	
+	pubilc DisplayPopup getPopup()
+	{
+		return popup;
+	}
+	
+	public ArrayList<Kahoot> getMyKahoots()
+	{
+		return (ArrayList<Kahoot>) myKahoots; 
 	}
 }
