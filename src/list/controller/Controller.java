@@ -25,7 +25,7 @@ public class Controller
 	{
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
-		fillTheList();
+		//fillTheList();
 		showTheList();
 		changeTheList();
 	}
@@ -68,7 +68,7 @@ public class Controller
 	}
 	
 	// Added objects into the myKahoots list.
-	private void fillTheList()
+	/*private void fillTheList()
 	{
 		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The fifty United States");
 		Kahoot bunnyFactsTackle = new Kahoot("Jeremy", 6, "Bunnies are carniverous.");
@@ -81,7 +81,7 @@ public class Controller
 		myKahoots.add(animalColor);
 		myKahoots.add(presidents);
 	}
-	
+	*/
 	private void changeTheList()
 	{
 		popup.displayText("The current list size is: " + myKahoots.size());
@@ -95,7 +95,7 @@ public class Controller
 		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with by the Kahoot from: " + myKahoots.get(2).getCreator());
 	}
 	
-	pubilc DisplayPopup getPopup()
+/*	pubilc DisplayPopup getPopup()
 	{
 		return popup;
 	}
@@ -104,4 +104,5 @@ public class Controller
 	{
 		return (ArrayList<Kahoot>) myKahoots; 
 	}
+	*/
 }
