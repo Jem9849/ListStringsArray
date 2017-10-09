@@ -6,12 +6,14 @@ import java.util.List;
 import java.util.ArrayList;
 import list.model.Kahoot;
 import list.view.DisplayPopup;
+import list.model.Questions;
 
 
 // Created a list called myKahoots and added a default kahoot called myFirstKahoot.
 public class ListController
 {
 	private List<Kahoot> myKahoots;
+	private List<Questions> myQuestions;
 	
 	private DisplayPopup popup;
 	
@@ -26,7 +28,8 @@ public class ListController
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-		showTheList();
+		//showTheList();
+		changeTheList();
 	}
 	
 	private void showTheList()
@@ -79,5 +82,18 @@ public class ListController
 		myKahoots.add(bigQuiz);
 		myKahoots.add(animalColor);
 		myKahoots.add(presidents);
+	}
+	
+	private void changeTheList()
+	{
+		popup.displayText("The current list size is: " + myKahoots.size());
+		Kahoot removed = myKahoots.remove(3);
+		popup.displayText("I removed the life of a Kahoot that was made by " + removed.getCreator());
+		popup.displayText("The list is now at: " + myKahoots.size() + " in size." );
+		myKahoots.add(0, removed);
+		
+		popup.displayText("The list is still: " + myKahoots.size() + " items big.");
+		removed = myKahoots.set(2, new Kahoot());
+		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with by the Kahoot from: " + myKahoots.get(2).getCreator());
 	}
 }
