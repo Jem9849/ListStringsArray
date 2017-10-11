@@ -108,6 +108,20 @@ public class Controller
 		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with by the Kahoot from: " + myKahoots.get(2).getCreator());
 	}
 	
+	public int findMinLength(ArrayList<String> myList)
+	{
+		int min = Integer.MAX_VALUE;
+		
+		for(int index = 0; index < myList.size(); index++)
+		{
+			if (myList.get(index).length() < min)
+			{
+				min = myList.get(index).length();
+			}
+		}
+		return min;
+	}
+	
 	public PopupDisplay getPopup()
 	{
 		return popup;
