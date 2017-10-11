@@ -1,11 +1,11 @@
-package list.controller;
+package tools.controller;
 
 
 // Imported lists and the kahoot class which sits in the model package.
 import java.util.List;
 import java.util.ArrayList;
-import list.model.Kahoot;
-import list.view.DisplayPopup;
+import tools.model.Kahoot;
+import tools.view.PopupDisplay;
 
 
 // Created a list called myKahoots and added a default kahoot called myFirstKahoot.
@@ -13,19 +13,19 @@ public class Controller
 {
 	private List<Kahoot> myKahoots;
 	
-	private DisplayPopup popup;
+	private PopupDisplay popup;
 	
 	public Controller()
 	{
 		myKahoots = new ArrayList<Kahoot>();
-		popup = new DisplayPopup();
+		popup = new PopupDisplay();
 	}
 	
 	public void start()
 	{
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
-		//fillTheList();
+		fillTheList();
 		showTheList();
 		changeTheList();
 	}
@@ -68,7 +68,7 @@ public class Controller
 	}
 	
 	// Added objects into the myKahoots list.
-	/*private void fillTheList()
+	private void fillTheList()
 	{
 		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The fifty United States");
 		Kahoot bunnyFactsTackle = new Kahoot("Jeremy", 6, "Bunnies are carniverous.");
@@ -81,7 +81,7 @@ public class Controller
 		myKahoots.add(animalColor);
 		myKahoots.add(presidents);
 	}
-	*/
+
 	private void changeTheList()
 	{
 		popup.displayText("The current list size is: " + myKahoots.size());
@@ -95,7 +95,7 @@ public class Controller
 		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with by the Kahoot from: " + myKahoots.get(2).getCreator());
 	}
 	
-/*	pubilc DisplayPopup getPopup()
+	public PopupDisplay getPopup()
 	{
 		return popup;
 	}
@@ -104,5 +104,4 @@ public class Controller
 	{
 		return (ArrayList<Kahoot>) myKahoots; 
 	}
-	*/
 }

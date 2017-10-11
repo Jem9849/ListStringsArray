@@ -1,4 +1,4 @@
-package list.view;
+package tools.view;
 
 import javax.swing.JOptionPane;
 /**
@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
  * @author Jeremy The Super Awesome Guy Ever Of Supremeness And Awesomeness That Is Also Awesome.
  * @version 1.0 10.03.2017
  */
-public class DisplayPopup
+public class PopupDisplay
 {
 	/**
 	 * 
