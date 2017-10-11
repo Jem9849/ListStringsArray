@@ -11,12 +11,13 @@ import tools.view.PopupDisplay;
 // Created a list called myKahoots and added a default kahoot called myFirstKahoot.
 public class Controller
 {
+	private List<String> fiftyStatesQuestions;
 	private List<Kahoot> myKahoots;
-	
 	private PopupDisplay popup;
 	
 	public Controller()
 	{
+		fiftyStatesQuestions = new ArrayList<String>();
 		myKahoots = new ArrayList<Kahoot>();
 		popup = new PopupDisplay();
 	}
@@ -65,21 +66,33 @@ public class Controller
 				popup.displayText(currentTopic.substring(letter, letter + 1));
 			}
 		}
+		
+		
+	}
+	
+	private void fillQuestionStates()
+	{
+		String utah = new String("What is the size of Utah?");
+		String texas = new String("What do people think when they think of Texas?");
+		String all = new String("How many states are there?");
+		fiftyStatesQuestions.add(utah);
+		fiftyStatesQuestions.add(texas);
+		fiftyStatesQuestions.add(all);
 	}
 	
 	// Added objects into the myKahoots list.
 	private void fillTheList()
 	{
 		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The fifty United States");
-		Kahoot bunnyFactsTackle = new Kahoot("Jeremy", 6, "Bunnies are carniverous.");
-		Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE, "Everything - literally");
-		Kahoot animalColor = new Kahoot("Branton", 10, "MURRRR COLORS");
-		Kahoot presidents = new Kahoot("Obama", 44, "The 44th president of US");
+		//Kahoot bunnyFactsTackle = new Kahoot("Jeremy", 6, "Bunnies are carniverous.");
+		//Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE, "Everything - literally");
+		//Kahoot animalColor = new Kahoot("Branton", 10, "MURRRR COLORS");
+		//Kahoot presidents = new Kahoot("Obama", 44, "The 44th president of US");
 		myKahoots.add(fiftyStates);
-		myKahoots.add(bunnyFactsTackle);
-		myKahoots.add(bigQuiz);
-		myKahoots.add(animalColor);
-		myKahoots.add(presidents);
+		//myKahoots.add(bunnyFactsTackle);
+		//myKahoots.add(bigQuiz);
+		//myKahoots.add(animalColor);
+		//myKahoots.add(presidents);
 	}
 
 	private void changeTheList()
