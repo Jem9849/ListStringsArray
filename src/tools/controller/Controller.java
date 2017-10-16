@@ -1,6 +1,5 @@
 package tools.controller;
 
-
 // Imported lists and the kahoot class which sits in the model package.
 import java.util.List;
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ public class Controller
 		myKahoots = new ArrayList<Kahoot>();
 		popup = new PopupDisplay();
 	}
-	
+	// This is a kahoot project using ArrayLists and Lists. It tries to emulate a Kahoot.
 	public void start()
 	{
 		Kahoot myFirstKahoot = new Kahoot();
@@ -31,6 +30,7 @@ public class Controller
 		changeTheList();
 	}
 	
+	// Here we show the creator, the number of questions, and the topic. We also have a default. 
 	private void showTheList()
 	{
 		String currentCreator = "";
@@ -54,8 +54,7 @@ public class Controller
 					}
 				}
 			}
-			
-			
+			// This here is how we print out the creator. We print it by single chars. We also print the topic the same way but backwards. We accomplish this with for loops and the substring function.
 			for (int currentLetterIndex = 0; currentLetterIndex < currentCreator.length(); currentLetterIndex += 1)
 			{
 				popup.displayText(currentCreator.substring(currentLetterIndex, currentLetterIndex + 1));
@@ -70,7 +69,7 @@ public class Controller
 		
 	}
 	
-	private void fillQuestionStates()
+	/*private void fillQuestionStates()
 	{
 		String utah = new String("What is the size of Utah?");
 		String texas = new String("What do people think when they think of Texas?");
@@ -79,7 +78,8 @@ public class Controller
 		fiftyStatesQuestions.add(texas);
 		fiftyStatesQuestions.add(all);
 	}
-	
+	*/
+	// Here we can add objects in the kahoot list. Just like the comment below says.
 	// Added objects into the myKahoots list.
 	private void fillTheList()
 	{
@@ -94,7 +94,7 @@ public class Controller
 		//myKahoots.add(animalColor);
 		//myKahoots.add(presidents);
 	}
-
+	// We can also change the list by removing things from the list and reducing the size or items inside.
 	private void changeTheList()
 	{
 		popup.displayText("The current list size is: " + myKahoots.size());
@@ -107,7 +107,7 @@ public class Controller
 		removed = myKahoots.set(2, new Kahoot());
 		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with by the Kahoot from: " + myKahoots.get(2).getCreator());
 	}
-	
+	// This here finds the minimum length of a value in the ArrayList.
 	public int findMinLength(ArrayList<String> myList)
 	{
 		int min = Integer.MAX_VALUE;
